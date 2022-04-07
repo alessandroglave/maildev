@@ -1,0 +1,14 @@
+version: '3'
+services:
+  maildev:
+    image: maildev/maildev
+    ports:
+    - "1080:80"
+    - "1025:25"
+    ## enable for other containers in 'dockernet' local network
+    #networks:
+    #  - dockernet
+#networks:
+#  dockernet:
+#    external:
+#      name: dockernet
